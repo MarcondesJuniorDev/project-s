@@ -15,6 +15,11 @@
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
                 </flux:navlist.group>
+                <flux:navlist.group :heading="__('Controle de Acesso')" class="grid">
+                    <flux:navlist.item icon="user" :href="route('users.index')" :current="request()->routeIs('users.index')" wire:navigate>{{ __('Usuários') }}</flux:navlist.item>
+                    <flux:navlist.item icon="user-group" :href="route('roles.index')" :current="request()->routeIs('roles.index')" wire:navigate>{{ __('Funções') }}</flux:navlist.item>
+                    <flux:navlist.item icon="lock-open" :href="route('permissions.index')" :current="request()->routeIs('permissions.index')" wire:navigate>{{ __('Permissões') }}</flux:navlist.item>
+                </flux:navlist.group>
             </flux:navlist>
 
             <flux:spacer />
